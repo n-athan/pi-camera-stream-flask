@@ -43,7 +43,7 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
  
 Handler = MyHttpRequestHandler
  
-with socketserver.TCPServer((HOST, PORT), Handler) as httpd:
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print("Http Server Serving at", HOST, ":", PORT)
     httpd.serve_forever()
 
