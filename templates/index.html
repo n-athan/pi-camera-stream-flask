@@ -182,8 +182,7 @@ button.onclick = function() {
 
 // Take and save a photo, call picture function in main.py
 $(function() {
-  $('a#take-picture').on('click', function(e) {
-    e.preventDefault()
+  $('#take-picture-button').click(function() {
     $.getJSON('/picture',
         function(data) {
       //do nothing
